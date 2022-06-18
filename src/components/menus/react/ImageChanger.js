@@ -5,21 +5,36 @@ export default class ImageChanger extends Component {
   constructor(props) {
     super(props);
     this.state = { imageIndex: 0 };
+  }
 
-    setInterval(() => {
+  componentDidMount() {
+    this.intervalId = setInterval(() => {
       this.changeImage();
     }, 3000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+
+  changeImage() {
+    this.setState((state, props) => {
+      return {
+        imageIndex: getIndex(images, this.state.imageIndex),
+      };
+    });
+  }
+
+  /* 
   changeImage() {
     this.setState({
       imageIndex: getIndex(images, this.state.imageIndex),
     });
-  }
+  } */
 
   render() {
     const image = images[this.state.imageIndex];
-    return <img src={image.src} width="auto" height="500" />;
+    return <img src={image.src} width="auto" height="300" />;
   }
 }
 
@@ -42,24 +57,27 @@ const images = [
     src: "https://images.pexels.com/photos/4095483/pexels-photo-4095483.jpeg?cs=srgb&dl=pexels-gaurav-ranjitkar-4095483.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/92081/pexels-photo-92081.jpeg?cs=srgb&dl=pexels-markus-spiske-92081.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/92081/pexels-photo-92081.jpeg?cs=srgb&dl=pexels-markus-spiske-92081.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/1058949/pexels-photo-1058949.jpeg?cs=srgb&dl=pexels-nappy-1058949.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/1058949/pexels-photo-1058949.jpeg?cs=srgb&dl=pexels-nappy-1058949.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/673018/pexels-photo-673018.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-673018.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/673018/pexels-photo-673018.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-673018.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?cs=srgb&dl=pexels-nappy-1058958.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?cs=srgb&dl=pexels-nappy-1058958.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/263950/pexels-photo-263950.jpeg?cs=srgb&dl=pexels-pixabay-263950.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/263950/pexels-photo-263950.jpeg?cs=srgb&dl=pexels-pixabay-263950.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/267104/pexels-photo-267104.jpeg?cs=srgb&dl=pexels-pixabay-267104.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/267104/pexels-photo-267104.jpeg?cs=srgb&dl=pexels-pixabay-267104.jpg&fm=jpg",
   },
   {
-    src: "https://images.pexels.com/photos/698333/pexels-photo-698333.jpeg?cs=srgb&dl=pexels-michal-pech-698333.jpg&fm=jpg"
-  }
+    src: "https://images.pexels.com/photos/698333/pexels-photo-698333.jpeg?cs=srgb&dl=pexels-michal-pech-698333.jpg&fm=jpg",
+  },
+  {
+    src: "https://images.pexels.com/photos/1211961/pexels-photo-1211961.jpeg?cs=srgb&dl=pexels-aneesh-ans-1211961.jpg&fm=jpg",
+  },
 ];

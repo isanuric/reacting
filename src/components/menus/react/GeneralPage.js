@@ -1,9 +1,7 @@
-import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
-import { height } from "@mui/system";
-import { purple, red, blueGrey, brown, blue } from '@mui/material/colors';
+import { Box, Grid, Typography } from "@mui/material";
+import { blueGrey } from '@mui/material/colors';
 
 import React, { Fragment } from "react";
-import ImageChanger from "./ImageChanger";
 
 const style = {
   gridContainer: {
