@@ -1,11 +1,11 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
-import { AppBarCuston } from "./components/navigation/AppBarCuston";
-import { Home } from "./components/pages/general/Home";
-import About from "./components/pages/general/About";
-import Contact from "./components/pages/general/Contact";
-import State from "./components/pages/react/State";
+import { AppBarCuston } from "./components/navigation/appBar/AppBarCuston";
+import { Home } from "./components/navigation/pages/general/Home";
+import About from "./components/navigation/pages/general/About";
+import Contact from "./components/navigation/pages/general/Contact";
+import State from "./components/navigation/pages/react/State";
 
 function App() {
   return (
