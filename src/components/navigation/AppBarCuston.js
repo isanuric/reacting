@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Box, Toolbar, Typography, Button, Grid } from "@mui/material";
 import NavLinkCustom from "./NavLinkCustom";
-import ReactMenu from "../menus/react/ReactMenu";
+import ReactMenu from "../pages/react/ReactMenu";
 import { purple, red, grey, brown } from '@mui/material/colors';
 
 

@@ -7,7 +7,6 @@
 .active-style{
     text-decoration: none; 
     padding: 1rem;
-    font-weight: bold;
-    color: rgb(67, 67, 247);
-    background-color: aliceblue;
+    color: rgb(57, 57, 72);
+    background-color: rgb(150, 154, 158);
 }
