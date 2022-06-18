@@ -1,0 +1,13 @@
+.inactive-style {
+    text-decoration: none;
+    padding: 1rem;
+    color: aliceblue;
+}
+
+.active-style{
+    text-decoration: none; 
+    padding: 1rem;
+    font-weight: bold;
+    color: rgb(67, 67, 247);
+    background-color: aliceblue;
+}
