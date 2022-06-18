@@ -1,12 +1,12 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { blueGrey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 import React, { Fragment } from "react";
 
 const style = {
   gridContainer: {
     textAlign: "center",
-    backgroundColor: blueGrey[400],
+    backgroundColor: grey[400],
     height: "100vh",
   },
   typography: {
