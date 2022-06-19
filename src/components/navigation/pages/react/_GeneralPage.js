@@ -7,7 +7,7 @@ const style = {
   gridContainer: {
     textAlign: "center",
     backgroundColor: grey[400],
-    height: "100vh",
+    // height: "100vh",
   },
   typography: {
     m: "3rem",

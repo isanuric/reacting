@@ -1,12 +1,12 @@
 import { Typography } from "@mui/material";
 import React, { Fragment } from "react";
-import { blueGrey, white } from "@mui/material/colors";
+import { blueGrey } from "@mui/material/colors";
 import GeneralPage from "./_GeneralPage";
 
 const style = {
   typography: {
     m: "8rem",
-    fontSize: "5rem",
+    fontSize: "4rem",
     color: blueGrey[100]
   },
 };
@@ -20,7 +20,7 @@ export const Home = () => {
 const content = (
   <Fragment>
     <Typography sx={style.typography}>
-      Welcome to React JS and MUI Playground Website
+      React JS and MUI Playground 
       </Typography>
   </Fragment>
 );

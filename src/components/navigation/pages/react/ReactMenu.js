@@ -2,9 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { color } from "@mui/system";
-import NavLinkCustom from "../NavLinkCustom";
-import State from "./State";
 import { Link } from "react-router-dom";
 
 export default function ReactMenu() {
@@ -38,10 +35,15 @@ export default function ReactMenu() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem component={Link} to="/state" onClick={handleClose}>State</MenuItem>
-        <MenuItem disabled onClick={handleClose}>My account</MenuItem>
-   
-        {/* <NavLinkCustom onClick={handleClose} to={"/state"} text={"State"} /> */}
+        <MenuItem component={Link} to="/state" onClick={handleClose}>
+          State
+        </MenuItem>
+        <MenuItem component={Link} to="/event"  onClick={handleClose}>
+          Event
+        </MenuItem>
+        <MenuItem disabled onClick={handleClose}>
+          Todo
+        </MenuItem>
       </Menu>
     </div>
   );
